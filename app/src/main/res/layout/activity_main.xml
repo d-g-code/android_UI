@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Hello World"
+        android:textColor="#1dd12c"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/sayHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@color/cardview_light_background"
+        android:onClick="onHelloBtnClicked"
+        android:text="Say Hello" />
+
+    <Button
+        android:id="@+id/btnHelloTerminal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sayHello"
+        android:layout_centerInParent="true"
+        android:text="Say Hello in terminal" />
+
+    <Button
+        android:id="@+id/btnHelloSay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnHelloTerminal"
+        android:layout_centerHorizontal="true"
+        android:text="Say hello Name" />
+
+    <EditText
+        android:id="@+id/edtTxtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnHelloSay"
+        android:layout_centerInParent="true"
+        android:hint="Name"
+        android:textColor="@color/black"
+        android:textStyle="italic|bold" />
+
+    <TextView
+        android:id="@+id/txtHelloView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtTxtName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="TextView"
+        android:textSize="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/movieRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="330dp">
+
+        <CheckBox
+            android:id="@+id/checkBoxHarry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Harry Potter" />
+
+        <CheckBox
+            android:id="@+id/checkBoxMatrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/checkBoxHarry"
+            android:checked="true"
+            android:text="The Matrix" />
+
+        <CheckBox
+            android:id="@+id/checkBoxJoker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/checkBoxMatrix"
+            android:checked="false"
+            android:text="Joker" />
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movieRelativeLayout"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:id="@+id/rgMaritalStatus">
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbMarried"
+            android:text="Married"
+            android:checked="true"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbSingle"
+            android:text="Single"
+            android:layout_marginLeft="5dp"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbInRelation"
+            android:text="In a Relationship"
+            android:layout_marginLeft="5dp"/>
+
+    </RadioGroup>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_below="@id/rgMaritalStatus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBarBelt"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/progressBar"
+        android:layout_marginTop="30dp"
+        android:visibility="visible"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:max="100"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+</RelativeLayout>
